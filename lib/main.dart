@@ -42,21 +42,21 @@ class _HomePageState extends State<HomePage> {
                 backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/99319134?s=400&u=33644532c0aec300daaa27a110c4a6d45cc3dfd4&v=4'),
               ),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.person),
               title: Text('Profile'),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.settings),
               title: Text('Setting'),
             ),
             ListTile(
-              leading: Icon(Icons.lock_open),
-              title: Text('Login'),
+              leading: const Icon(Icons.lock_open),
+              title: const Text('Login'),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context){
                   return const Login();
@@ -74,7 +74,6 @@ class _HomePageState extends State<HomePage> {
                 setState(() {
 
                 });
-                print('Hello world');
               },
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:navigation_drawer/signup_page.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -117,9 +118,18 @@ class _LoginState extends State<Login> {
             SizedBox(height: height*0.05,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text('Already have an account?'),
-                Text(' Signup',style: TextStyle(color: Colors.blue,fontSize: 17),)
+              children:  [
+                const Text('Already have an account?'),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const SignUpPage();
+                    }
+                    ));
+                  },
+                  child: const Text(' Signup',style: TextStyle(color: Colors.blue,fontSize: 17),),
+                ),
+
               ],
             )
           ],
