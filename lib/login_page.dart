@@ -119,7 +119,7 @@ class _LoginState extends State<Login> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
-                const Text('Already have an account?'),
+                const Text('Don\'t have an account?'),
                 GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context){
