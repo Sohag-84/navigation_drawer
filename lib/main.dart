@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,8 +33,8 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.black26,
         child: ListView(
-          children:  const [
-            UserAccountsDrawerHeader(
+          children:   [
+            const UserAccountsDrawerHeader(
                 accountName: Text('Injamul Haq Sohag'),
                 accountEmail: Text('Eastern University'),
               currentAccountPicture: CircleAvatar(
@@ -56,10 +57,25 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: Icon(Icons.lock_open),
               title: Text('Login'),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return const Login();
+                })
+                );
+                setState(() {
+                  
+                });
+              },
             ),
             ListTile(
-              leading: Icon(Icons.lock),
-              title: Text('Logout'),
+              leading: const Icon(Icons.lock),
+              title: const Text('Logout'),
+              onTap: (){
+                setState(() {
+
+                });
+                print('Hello world');
+              },
             ),
           ],
         ),
